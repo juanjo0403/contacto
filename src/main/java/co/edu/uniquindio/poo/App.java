@@ -36,5 +36,25 @@ public class App {
         Reuniones reuniones= new Reuniones("CRUCIAL", null, null);
         reuniones.agregarContacto(contacto2);
         Reuniones.mostrarMensaje(reuniones.toString());
+        //Verificar y mostrar si el contacto exiate o no
+        String telefono= "0";
+        boolean contactoExiste= contacto.ValidarNumeroTelefono(telefono);
+        if (contactoExiste){
+            Contacto.mostrarMensaje("El Contacto con telefono "+telefono+" existe");
+        }else{
+            Contacto.mostrarMensaje("El Contacto con telefono "+telefono+" no existe");
+        }
+        // Eliminar contacto
+        String numeroTelefonico= "317345682";
+        contacto.eliminarContacto(numeroTelefonico);
+        Contacto.mostrarMensaje("El estudiante con el número telefonico "+numeroTelefonico+" fue removido");
+        Contacto.mostrarMensaje(contacto.toString());
+        // Actualizar contacto
+        String numetoTelefonico2= "451288351";
+        contacto.actualizarContacto("NA", "CRA 8 56 52", numetoTelefonico2);
+        Contacto.mostrarMensaje("El contacto con el número telefonico " +numetoTelefonico2+" ha sido actualizado");
+        // Contacto actualizado
+        Contacto.mostrarMensaje("El curso ha sido actualizado: \n");
+        Contacto.mostrarMensaje(contacto.toString());
     }
 }

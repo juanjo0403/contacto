@@ -47,14 +47,4 @@ public class Reuniones {
     public void agregarContacto (Contacto contacto){
         contactosAsistentes.add(contacto);
     }
-    public void actualizarContacto ( String direccion, String telefono, String email){
-        for (Contacto contacto: contactosAsistentes){
-            if (contacto.getEmail().equals(email)){
-                contacto.setDireccion(direccion);
-                contacto.setTelefono(telefono);
-                break;
-            }
-        }
-
-    }
 }
